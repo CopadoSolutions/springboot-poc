@@ -1,0 +1,16 @@
+server.port: 9090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGRE_URL}
+    username: ${POSTGRE_USER}
+    password: ${POSTGRE_PWD}
+  jpa:
+    hibernate.ddl-auto: create-drop
+  data:
+    redis:
+      repositories:
+        enabled: true
+
+redis.url: ${REDIS_URL}
